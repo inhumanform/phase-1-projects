@@ -1,0 +1,21 @@
+{
+    "varietal-info": [
+        {
+            "id": 1,
+            "grape-color": "Red",
+            "grape-name": "Cabernet Sauvignon",
+            "origin": "France",
+            "description": "Often synonymous Bordeaux wine blends and the Napa Valley, Cabernet Sauvignon is found worldwide – in no small part due to its prized combination of black fruit aromas, structural tannins, and fresh acidity.",
+            "key-growing-regions": ["Napa Valley, Califronia", "Bordeaux, France", "Maipo Valley, Chile", "Barossa Valley, Australia"],
+
+            "id": 2,
+            "grape-color": "Red",
+            "grape-name": "Cabernet Franc",
+            "origin": "France",
+            "description": "Cabernet Franc is a black-skinned French wine grape variety grown in most wine producing nations. The variety is most famously known as a key red grape in the Loire Valley and as the third grape of Bordeaux. It can be found in many of the world's top Bordeaux blend wines.",
+            "key-growing-regions": ["Napa Valley, Califronia", "Bordeaux, France", "Maipo Valley, Chile", "Barossa Valley, Australia"]
+
+        }
+        ]
+        }   
+        

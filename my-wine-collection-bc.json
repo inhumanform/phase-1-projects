@@ -1,0 +1,14 @@
+{
+    "my-wine-collection": [
+        {
+            "id": 1,
+            "name": "Chateau Musar Cinsault",
+            "vintage": "2010",
+            "image": "./assets/placeholder-wine-image.jpg",
+            "purchase-price":"$299.99",
+            "comment": "The famed Lebanese producer's only mono-varietal wine. This barrel of Cinsault was 'discovered' by Serge Hochar deep within the Musar cellars, likely a forgotten leftover ingredient for a vintaged blend. Only 3000 bottles made",
+            "rating": "8.5 / 10"
+
+        }
+    ]
+    }  

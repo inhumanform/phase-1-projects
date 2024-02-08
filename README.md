@@ -14,3 +14,12 @@ This small application will provide users with a lightweight source to list, cat
 1. Use 'Open Brewery DB' API to return brewery data 
 2. Use 'Global Wine Score' API to return wine score data
 3. Build a custom data base with Wine Appellation info. Likely to start with France, USA, and Italy. Likely to expand.
+
+# Pitch Deliverables#
+
+1. Basic Story
+2. Core Features
+3. How I'll use the db.json and API
+4. Challenges I expect to face
+5. 3 distinct event listeners
+6. Instances of array iteration: you can use .forEach(). .map(), .filter()
