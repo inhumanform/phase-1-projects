@@ -1,0 +1,15 @@
+#bev-image img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.detail-image {
+    width: 200px;
+    height: auto;
+}
+
+#bev-details {
+    margin-top: 20px;
+}

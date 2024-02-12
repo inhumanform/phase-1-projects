@@ -6,30 +6,25 @@
     <title>World Wine Web</title>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script defer type="text/javascript" src="phase-1-projects/index.js"></script>
+    <script defer type="text/javascript" src="index.js"></script>
 </head>
 
 <body>
-    <div id="bev-image">
-    </div>
-
-    <div id=" bev-details">
-    </div>
-
+    <div id="bev-image"></div>
+    <div id="bev-details"></div>
     <form id="new-bev">
-        <label for="new-name">Name </label>
+        <label for="new-name">Name: </label>
         <input type="text" name="name" id="new-name" />
         <label for="new-vintage">Vintage: </label>
         <input type="text" name="vintage" id="new-vintage" />
-        <label for="new-btl-img">Bottle Image: </label>
+        <label for="new-image">Bottle Image: </label>
         <input type="text" name="image" id="new-image" />
-        <label for="new-purchase-price">Purchase Price: </label>
+        <label for="purchase-price">Purchase Price: </label>
         <input type="number" name="purchase-price" id="purchase-price" />
         <label for="new-comment">Comment: </label>
-        <textarea name="new-comment" name="new-comment" id="new-comment"></textarea>
+        <textarea id="new-comment"></textarea>
         <input type="submit" id='submit-button' value="Add to Cellar" />
     </form>
-
 </body>
 
 </html>

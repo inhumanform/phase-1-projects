@@ -1,0 +1,37 @@
+{
+    "wine": [
+
+        {
+            "id": 1,
+            "name": "Chateau Musar Cinsault",
+            "vintage": "2010",
+            "image": "assets/Musar-2010.jpg",
+            "purchase-price": "$299.99",
+            "comment": "The famed Lebanese producer's only mono-varietal wine. This barrel of Cinsault was 'discovered' by Serge Hochar deep within the Musar cellars, likely a forgotten leftover ingredient for a vintaged blend. Only 3000 bottles made",
+            "rating": "8.5 / 10",
+            "varietal-id": 2
+        },
+        {
+            "id": 2,
+            "name": "Domaine Didier Dagueneau 'Blanc...etc.'",
+            "vintage": "2020",
+            "image": "assets/dagueneaublancetc.jpg",
+            "purchase-price": "$119.99",
+            "comment": "Known as a maverick in the Loire Valley, Dagueneau focuses on distinct soil types to higlight his wines stark minerality ",
+            "rating": "9.0 / 10",
+            "varietal-id": 36
+        },
+        {
+            "id": 3,
+            "name": "Perrier-Jouët 'Belle Époque Brut'",
+            "vintage": "1996",
+            "image": "assets/Perrier-Jouet+1996+Belle+Epoque.jpeg",
+            "purchase-price": "$119.99",
+            "comment": "The tete de cuvee of one of Champagne's most prestigious producers, and the only item in their lineup where they declare a vintage.",
+            "rating": "8.5 / 10",
+            "varietal-id": [27 , 2]
+        }
+
+
+    ]
+}
