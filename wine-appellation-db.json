@@ -5,7 +5,7 @@
             "category": "Wine",
             "name": "Howell Mountain",
             "country": "United States of America",
-            "parent-region": "Napa Valley AVA",
+            "parentRegion": "Napa Valley AVA",
             "state": "California"
         },
         {
@@ -13,7 +13,7 @@
             "category": "Wine",
             "name": "Calistoga",
             "country": "United States of America",
-            "parent-region": "Napa Valley AVA",
+            "parentRegion": "Napa Valley AVA",
             "state": "California"
         },
         {
@@ -21,7 +21,7 @@
             "category": "Wine",
             "name": "Chiles Valley",
             "country": "United States of America",
-            "parent-region": "Napa Valley AVA",
+            "parentRegion": "Napa Valley AVA",
             "state": "California"
         }
     ]
