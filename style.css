@@ -1,15 +1,90 @@
-#bev-image img {
-    width: 100px;
-    height: auto;
-    margin: 10px;
-    cursor: pointer;
+#bev-image {
+display: flex;
+object-fit: contain;
+flex-wrap: nowrap;
+flex-direction: row;
+img {
+max-width: 100px;
+max-height: 100px ;
+padding-top: 10px;
 }
-
-.detail-image {
-    width: 200px;
-    height: auto;
 }
 
 #bev-details {
-    margin-top: 20px;
+    img {
+        max-width: 500px;
+        max-height: 500px;
+        position: relative;
+
+    }
+}
+@font-face {
+    font-family: 'Metal';
+    src: url('../phase-1-projects/assets/Fonts/evil-sound-font/EvilSound-nRM8M.ttf');
+
+}
+
+@font-face {
+    font-family: 'Doom';
+    src: url('../phase-1-projects/assets/Fonts/goth-titan-font/GothTitan-0W5md.ttf');
+
+}
+
+.NameofWebsite {
+font-family: 'Metal';
+font-size: 65px;
+background-color: black;
+background-size:75%;
+color: aliceblue;
+width: 100%;
+display: inline-block;
+
+}
+
+#new-bev {
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    width: 200px;
+    column-gap: 50px:;
+    margin-left: 1200px;
+
+
+
+}
+#new-comment {
+}
+
+h2 {
+    font-family: 'Doom';
+}
+
+h3 {
+    font-family: 'Doom';
+}
+
+h4 {
+    font-family: 'Doom';
+}
+
+h5{
+    font-family: 'Doom';
+}
+
+h6 {
+    font-family: 'Doom';
+    font-size: 36px;
+}
+.searchable {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: 'Doom';
+    margin-left: -50px;
+    font-size: 24px;
+    background-color: black;
+    font-size: 36px;
+
+
 }

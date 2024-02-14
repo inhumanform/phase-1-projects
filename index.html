@@ -3,28 +3,106 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>World Wine Web</title>
+    <title>Ogun</title>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="style.css">
     <script defer type="text/javascript" src="index.js"></script>
+
+    <script>
+        function setup() {
+            document.getElementById('buttonid').addEventListener('click', openDialog);
+            function openDialog() {
+                document.getElementById('fileid').click();
+            }
+            document.getElementById('fileid').addEventListener('change', submitForm);
+            function submitForm() {
+                document.getElementById('formid').submit();
+            }
+        }
+    </script>
+</head>
 </head>
 
 <body>
-    <div id="bev-image"></div>
-    <div id="bev-details"></div>
-    <form id="new-bev">
-        <label for="new-name">Name: </label>
-        <input type="text" name="name" id="new-name" />
-        <label for="new-vintage">Vintage: </label>
-        <input type="text" name="vintage" id="new-vintage" />
-        <label for="new-image">Bottle Image: </label>
-        <input type="text" name="image" id="new-image" />
-        <label for="purchase-price">Purchase Price: </label>
-        <input type="number" name="purchase-price" id="purchase-price" />
-        <label for="new-comment">Comment: </label>
-        <textarea id="new-comment"></textarea>
-        <input type="submit" id='submit-button' value="Add to Cellar" />
-    </form>
+    <div class="Title-Header">
+        <span class="NameofWebsite">Ogun</span>
+
+        <div class="searchable">
+            <a href="#">my collection</a>
+            <span class="wine-search"></span>
+            <input type="text" class="textbox" placeholder="search your wines..." />
+            <a class="search-btn" id="collection-search-button" href="#">
+                <!-- <p>></p> -->
+            </a>
+
+            <a href="#">grapes</a>
+            <span class="grape-search"></span>
+            <input type="text" class="textbox" placeholder="search grapes..." />
+            <a class="search-btn" id="grape-search-button" href="#">
+                <!-- <p>></p> -->
+            </a>
+            </span>
+
+            <a href="#">regions</a>
+            <span class="region-search">
+                <spa />
+                <input type="text" class="textbox" placeholder="search wine regions..." />
+                <a class="search-btn" id="region-search-button" href="#">
+                    <!-- <p>></p> -->
+                </a>
+            </span>
+        </div>
+
+        <!-- <div class="grape-search">
+                <input type="text" class="textbox" placeholder="search grapes..."/>
+                <a class = "search-btn" href="#">
+                  <p>></p>
+                </a>
+              </div>
+
+              <div class="wine-search">
+                <input type="text" class="textbox" placeholder="search your wines..."/>
+                <a class = "search-btn" href="#">
+                  <p>></p>
+                </a>
+              </div>
+
+              <div class="region-search">
+                <input type="text" class="textbox" placeholder="search wine regions..."/>
+                <a class = "search-btn" href="#">
+                  <p>></p>
+                </a>
+              </div> -->
+
+        <div id="bev-image"></div>
+        <div id="bev-details"></div>
+
+
+        <div>
+            <form id="new-bev">
+                <label for="new-name">Name: </label>
+                <input type="text" name="name" id="new-name" />
+                <label for="new-vintage">Vintage: </label>
+                <input type="text" name="vintage" id="new-vintage" />
+                <label for="new-image">Bottle Image: </label>
+                <input type="text" name="image" id="new-image" />
+                <label for="purchase-price">Purchase Price: </label>
+                <input type="number" name="purchase-price" id="purchase-price" />
+                <label for="new-comment">Comment: </label>
+                <textarea id="new-comment"></textarea>
+                <input type="submit" id='submit-button' value="Add to Cellar" />
+
+                <body onload="setup()">
+                    <form id='formid' action="form.php" method="POST" enctype="multipart/form-data">
+                        <input id='fileid' type='file' name='filename' hidden />
+                        <input id='buttonid' type='button' value='Upload Bottle Image' />
+                        <input type='submit' value='Submit' />
+                    </form>
+
+            </form>
+        </div>
+
+
 </body>
 
 </html>
