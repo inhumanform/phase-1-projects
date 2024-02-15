@@ -3,7 +3,7 @@
         {
             "id": 1,
             "grapeColor": "Red",
-            "grapeName": "Cabernet Sauvignon",
+            "name": "Cabernet Sauvignon",
             "origin": "France",
             "description": "Often synonymous Bordeaux wine blends and the Napa Valley, Cabernet Sauvignon is found worldwide, in no small part due to its prized combination of black fruit aromas, structural tannins, and fresh acidity.",
             "growingRegions": [
@@ -16,7 +16,7 @@
         {
             "id": 51,
             "grapeColor": "Red",
-            "grapeName": "Cabernet Franc",
+            "name": "Cabernet Franc",
             "origin": "France",
             "description": "Cabernet Franc is a black-skinned French wine grape variety grown in most wine producing nations. The variety is most famously known as a key red grape in the Loire Valley and as the third grape of Bordeaux. It can be found in many of the world's top Bordeaux blend wines.",
             "growingRegions": [
@@ -29,7 +29,7 @@
         {
             "id": 2,
             "grapeColor": "Red",
-            "grapeName": "Pinot Noir",
+            "name": "Pinot Noir",
             "origin": "France",
             "description": "Famous for its role in Burgundian wines, Pinot Noir is prized for its aromas of red fruits, flowers, and spices, with a complex structure and a subtly earthy undertone.",
             "growingRegions": [
@@ -42,7 +42,7 @@
         {
             "id": 3,
             "grapeColor": "Red",
-            "grapeName": "Gamay",
+            "name": "Gamay",
             "origin": "France",
             "description": "Best known for producing the light, fruity wines of Beaujolais, Gamay offers vibrant cherry and berry flavors with low tannins, making it a favorite for early drinking.Despit its typecasting in to light Noveau wines, Cru Beaujolais is making its mark with ",
             "growingRegions": [
@@ -54,7 +54,7 @@
         {
             "id": 4,
             "grapeColor": "Red",
-            "grapeName": "Tempranillo",
+            "name": "Tempranillo",
             "origin": "Spain",
             "description": "The backbone of Rioja and Ribera del Duero wines in Spain, Tempranillo is celebrated for its savory leather aromas, structured tannins, and ability to age gracefully.",
             "growingRegions": [
@@ -66,7 +66,7 @@
         {
             "id": 5,
             "grapeColor": "Red",
-            "grapeName": "Malbec",
+            "name": "Malbec",
             "origin": "France",
             "description": "Though originally from France, Malbec has found its star status in the vineyards of Argentina, offering plush, dark fruit flavors and an inky, velvety texture.",
             "growingRegions": [
@@ -78,7 +78,7 @@
         {
             "id": 6,
             "grapeColor": "Red",
-            "grapeName": "Barbera",
+            "name": "Barbera",
             "origin": "Italy",
             "description": "Predominant in Italy's Piedmont region, Barbera is known for its high acidity and low tannins, presenting a profile rich in juicy dark cherry and plum flavors.",
             "growingRegions": [
@@ -89,7 +89,7 @@
         {
             "id": 7,
             "grapeColor": "Red",
-            "grapeName": "Merlot",
+            "name": "Merlot",
             "origin": "France",
             "description": "Merlot enjoys worldwide popularity, offering a soft, ripe, plush texture with flavors of plums and black cherries alongside a gentle tannic structure.",
             "growingRegions": [
@@ -102,7 +102,7 @@
         {
             "id": 8,
             "grapeColor": "Red",
-            "grapeName": "Petit Verdot",
+            "name": "Petit Verdot",
             "origin": "France",
             "description": "Traditionally used as a blending grape in Bordeaux for its deep color, high tannins, and floral aromas, Petit Verdot is increasingly being bottled as a varietal wine.",
             "growingRegions": [
@@ -113,7 +113,7 @@
         {
             "id": 9,
             "grapeColor": "Red",
-            "grapeName": "Grenache",
+            "name": "Grenache",
             "origin": "Spain",
             "description": "Grenache is cherished for its ability to produce warm, spicy wines with red fruit flavors and a soft texture, often found in Rhône blends and Spanish Garnacha.",
             "growingRegions": [
@@ -125,7 +125,7 @@
         {
             "id": 10,
             "grapeColor": "Red",
-            "grapeName": "Nebbiolo",
+            "name": "Nebbiolo",
             "origin": "Italy",
             "description": "The noble grape of Piedmont, Nebbiolo, is renowned for its tar and roses aroma profile, significant tannins, and acidity, which contribute to the longevity of Barolo and Barbaresco wines.",
             "growingRegions": [
@@ -135,7 +135,7 @@
         {
             "id": 11,
             "grapeColor": "Red",
-            "grapeName": "Sangiovese",
+            "name": "Sangiovese",
             "origin": "Italy",
             "description": "The quintessential Italian grape, Sangiovese forms the backbone of Chianti and Brunello di Montalcino, offering flavors of tart cherry, earth, and herbs.",
             "growingRegions": [
@@ -146,7 +146,7 @@
         {
             "id": 12,
             "grapeColor": "Red",
-            "grapeName": "Syrah",
+            "name": "Syrah",
             "origin": "France",
             "description": "Known as Shiraz in Australia, Syrah is versatile, known for its powerful dark fruit flavors, peppery and savory spice notes, and ability to produce both opulent and structured wines.",
             "growingRegions": [
@@ -158,7 +158,7 @@
         {
             "id": 13,
             "grapeColor": "Red",
-            "grapeName": "Blaufränkisch",
+            "name": "Blaufränkisch",
             "origin": "Austria",
             "description": "Known for its deep color, high tannins, and spicy character with dark berry flavors. It's a key varietal in Austrian red wines.",
             "growingRegions": [
@@ -169,7 +169,7 @@
         {
             "id": 14,
             "grapeColor": "Red",
-            "grapeName": "Zweigelt",
+            "name": "Zweigelt",
             "origin": "Austria",
             "description": "Austria's most planted red grape variety, offering juicy, medium-bodied wines with cherry and spice notes.",
             "growingRegions": [
@@ -180,7 +180,7 @@
         {
             "id": 15,
             "grapeColor": "Red",
-            "grapeName": "Dornfelder",
+            "name": "Dornfelder",
             "origin": "Germany",
             "description": "A dark-skinned variety producing richly colored red wines with velvety tannins and flavors of dark fruits and hints of almond.",
             "growingRegions": [
@@ -191,7 +191,7 @@
         {
             "id": 16,
             "grapeColor": "Red",
-            "grapeName": "Saperavi",
+            "name": "Saperavi",
             "origin": "Georgia",
             "description": "This teinturier variety from Georgia is known for its deep color, full body, and strong acidity, offering flavors of dark fruits and spicy, earthy notes.",
             "growingRegions": [
@@ -201,7 +201,7 @@
         {
             "id": 17,
             "grapeColor": "Red",
-            "grapeName": "Frappato",
+            "name": "Frappato",
             "origin": "Italy",
             "description": "A lighter-bodied red with a bright red fruit character, often blended with Nero d'Avola in Sicily's Cerasuolo di Vittoria.",
             "growingRegions": [
@@ -211,7 +211,7 @@
         {
             "id": 18,
             "grapeColor": "Red",
-            "grapeName": "Xinomavro",
+            "name": "Xinomavro",
             "origin": "Greece",
             "description": "Meaning 'acid-black', it produces wines with high acidity and tannins, known for their complex aromas of red fruits, olives, and spices.",
             "growingRegions": [
@@ -222,7 +222,7 @@
         {
             "id": 19,
             "grapeColor": "Red",
-            "grapeName": "Tannat",
+            "name": "Tannat",
             "origin": "France",
             "description": "Best known for its role in Madiran wines, Tannat is celebrated for its potent tannins, dark fruit flavors, and aging potential.",
             "growingRegions": [
@@ -233,7 +233,7 @@
         {
             "id": 20,
             "grapeColor": "Red",
-            "grapeName": "Mourvèdre",
+            "name": "Mourvèdre",
             "origin": "Spain",
             "description": "Valued for its full body, rustic flavors, and ability to add complexity to blends, it's often found in GSM (Grenache, Syrah, Mourvèdre) wines.",
             "growingRegions": [
@@ -244,7 +244,7 @@
         {
             "id": 21,
             "grapeColor": "Red",
-            "grapeName": "Zinfandel",
+            "name": "Zinfandel",
             "origin": "Croatia",
             "description": "Famous in California for producing robust, fruit-forward reds as well as the semi-sweet blush Zinfandel (White Zinfandel).",
             "growingRegions": [
@@ -255,7 +255,7 @@
         {
             "id": 22,
             "grapeColor": "Red",
-            "grapeName": "Carmenère",
+            "name": "Carmenère",
             "origin": "France",
             "description": "Once mistaken for Merlot in Chile, Carmenère offers distinct herbaceous green pepper notes alongside dark fruit flavors.",
             "growingRegions": [
@@ -266,7 +266,7 @@
         {
             "id": 23,
             "grapeColor": "Red",
-            "grapeName": "Dolcetto",
+            "name": "Dolcetto",
             "origin": "Italy",
             "description": "This early-ripening variety produces wines that are typically dry, light to medium-bodied, with black cherry and licorice flavors.",
             "growingRegions": [
@@ -276,7 +276,7 @@
         {
             "id": 24,
             "grapeColor": "Red",
-            "grapeName": "Nerello Mascalese",
+            "name": "Nerello Mascalese",
             "origin": "Italy",
             "description": "Grown on the slopes of Mount Etna in Sicily, it's known for its fine tannins, elegance, and similarity to Nebbiolo.",
             "growingRegions": [
@@ -286,7 +286,7 @@
         {
             "id": 25,
             "grapeColor": "Red",
-            "grapeName": "Teroldego",
+            "name": "Teroldego",
             "origin": "Italy",
             "description": "A deeply colored grape producing rich, full-bodied wines with a character of dark fruits, forest floor, and bitter almonds.",
             "growingRegions": [
@@ -296,7 +296,7 @@
         {
             "id": 26,
             "grapeColor": "Red",
-            "grapeName": "Pinotage",
+            "name": "Pinotage",
             "origin": "South Africa",
             "description": "A cross between Pinot Noir and Cinsault, Pinotage is known for its bold, smoky flavors alongside dark fruits.",
             "growingRegions": [
@@ -306,7 +306,7 @@
         {
             "id": 27,
             "grapeColor": "White",
-            "grapeName": "Chardonnay",
+            "name": "Chardonnay",
             "origin": "France",
             "description": "A versatile grape that can be crafted into a range of styles from buttery, oak-aged to crisp, unoaked. Known for its apple, citrus, and tropical fruit flavors.",
             "growingRegions": [
@@ -318,7 +318,7 @@
         {
             "id": 28,
             "grapeColor": "White",
-            "grapeName": "Pinot Gris",
+            "name": "Pinot Gris",
             "origin": "France",
             "description": "Produces rich, full-bodied white wines with spicy and floral notes. Known as Pinot Grigio in Italy where styles tend to be lighter and crisper.",
             "growingRegions": [
@@ -330,7 +330,7 @@
         {
             "id": 29,
             "grapeColor": "White",
-            "grapeName": "Pinot Grigio",
+            "name": "Pinot Grigio",
             "origin": "Italy",
             "description": "Italian name for Pinot Gris, producing light, crisp, mineral-driven wines with citrus and green apple notes.",
             "growingRegions": [
@@ -342,7 +342,7 @@
         {
             "id": 30,
             "grapeColor": "White",
-            "grapeName": "Riesling",
+            "name": "Riesling",
             "origin": "Germany",
             "description": "Aromatic grape variety producing highly acidic wines with apple, peach, and pear notes. Capable of ageing well, especially in sweeter styles.",
             "growingRegions": [
@@ -354,7 +354,7 @@
         {
             "id": 31,
             "grapeColor": "White",
-            "grapeName": "Viognier",
+            "name": "Viognier",
             "origin": "France",
             "description": "Full-bodied white wines with aromas of peach, tangerine, and honeysuckle. Often sees some oak ageing.",
             "growingRegions": [
@@ -365,7 +365,7 @@
         {
             "id": 32,
             "grapeColor": "White",
-            "grapeName": "Gewurztraminer",
+            "name": "Gewurztraminer",
             "origin": "France",
             "description": "Highly aromatic variety known for its spicy lychee, rose petal, and grapefruit flavors. Produces wines ranging from dry to sweet.",
             "growingRegions": [
@@ -376,7 +376,7 @@
         {
             "id": 33,
             "grapeColor": "White",
-            "grapeName": "Albariño",
+            "name": "Albariño",
             "origin": "Spain",
             "description": "Produces aromatic, high-acid wines with peach, apricot, and almond flavors, often with a saline minerality.",
             "growingRegions": [
@@ -387,7 +387,7 @@
         {
             "id": 34,
             "grapeColor": "White",
-            "grapeName": "Müller-Thurgau",
+            "name": "Müller-Thurgau",
             "origin": "Germany",
             "description": "A cross between Riesling and Madeleine Royale, this grape produces floral, fruity wines with a soft acidity.",
             "growingRegions": [
@@ -398,7 +398,7 @@
         {
             "id": 35,
             "grapeColor": "White",
-            "grapeName": "Aligoté",
+            "name": "Aligoté",
             "origin": "France",
             "description": "The second white grape of Burgundy, behind Chardonnay, known for its crisp acidity and apple flavors.",
             "growingRegions": [
@@ -408,7 +408,7 @@
         {
             "id": 36,
             "grapeColor": "White",
-            "grapeName": "Sauvignon Blanc",
+            "name": "Sauvignon Blanc",
             "origin": "France",
             "description": "Famous for its grassy, herbaceous flavors and high acidity. Often blended with Sémillon in Bordeaux.",
             "growingRegions": [
@@ -420,7 +420,7 @@
         {
             "id": 37,
             "grapeColor": "White",
-            "grapeName": "Sémillon",
+            "name": "Sémillon",
             "origin": "France",
             "description": "Produces full-bodied wines, often with a waxy texture. Notable for its role in Sauternes and as a blend with Sauvignon Blanc.",
             "growingRegions": [
@@ -431,7 +431,7 @@
         {
             "id": 38,
             "grapeColor": "White",
-            "grapeName": "Assyrtiko",
+            "name": "Assyrtiko",
             "origin": "Greece",
             "description": "Known for its mineral and lemon flavors, high acidity, and ability to retain freshness even in hot climates.",
             "growingRegions": [
@@ -441,7 +441,7 @@
         {
             "id": 39,
             "grapeColor": "White",
-            "grapeName": "Marsanne",
+            "name": "Marsanne",
             "origin": "France",
             "description": "Produces full-bodied, rich wines with flavors of pear and spice. Often blended with Roussanne.",
             "growingRegions": [
@@ -452,7 +452,7 @@
         {
             "id": 40,
             "grapeColor": "White",
-            "grapeName": "Roussanne",
+            "name": "Roussanne",
             "origin": "France",
             "description": "Valued for its acidity and stone fruit flavors, Roussanne is often blended with Marsanne to add richness.",
             "growingRegions": [
@@ -463,7 +463,7 @@
         {
             "id": 41,
             "grapeColor": "White",
-            "grapeName": "Malvasia",
+            "name": "Malvasia",
             "origin": "Greece",
             "description": "A group of grape varieties producing highly aromatic wines with flavors of peach, nectarine, and honey.",
             "growingRegions": [
@@ -473,7 +473,7 @@
         {
             "id": 42,
             "grapeColor": "White",
-            "grapeName": "Furmint",
+            "name": "Furmint",
             "origin": "Hungary",
             "description": "Best known for its role in Tokaji Aszú, Furmint produces wines with high acidity, green apple, and pear flavors, capable of aging.",
             "growingRegions": [
@@ -483,7 +483,7 @@
         {
             "id": 43,
             "grapeColor": "White",
-            "grapeName": "Muscat of Alexandria",
+            "name": "Muscat of Alexandria",
             "origin": "Egypt",
             "description": "One of the oldest genetically unmodified vines still in existence. Known for its sweet floral aromas.",
             "growingRegions": [
@@ -493,7 +493,7 @@
         {
             "id": 44,
             "grapeColor": "White",
-            "grapeName": "Petit Manseng",
+            "name": "Petit Manseng",
             "origin": "France",
             "description": "Produces high-quality sweet wines with vibrant acidity and flavors of tropical fruit and honey.",
             "growingRegions": [
@@ -503,7 +503,7 @@
         {
             "id": 45,
             "grapeColor": "White",
-            "grapeName": "Gros Manseng",
+            "name": "Gros Manseng",
             "origin": "France",
             "description": "Often used to produce dry and sweet wines with bright acidity and flavors of citrus and tropical fruit.",
             "growingRegions": [
@@ -513,7 +513,7 @@
         {
             "id": 46,
             "grapeColor": "White",
-            "grapeName": "Chenin Blanc",
+            "name": "Chenin Blanc",
             "origin": "France",
             "description": "Versatile grape known for its high acidity and ability to produce everything from dry to sweet, still to sparkling wines.",
             "growingRegions": [
@@ -524,7 +524,7 @@
         {
             "id": 47,
             "grapeColor": "White",
-            "grapeName": "Vermentino",
+            "name": "Vermentino",
             "origin": "Italy",
             "description": "A light-bodied white grape with citrus, pear, and floral flavors, along with a notable minerality.",
             "growingRegions": [
@@ -535,7 +535,7 @@
         {
             "id": 48,
             "grapeColor": "White",
-            "grapeName": "Cortese",
+            "name": "Cortese",
             "origin": "Italy",
             "description": "Best known for producing Gavi, this grape offers crisp, refreshing wines with green apple and citrus notes.",
             "growingRegions": [
@@ -545,7 +545,7 @@
         {
             "id": 49,
             "grapeColor": "White",
-            "grapeName": "Hondarribi Zuri",
+            "name": "Hondarribi Zuri",
             "origin": "Spain",
             "description": "The principal grape used in the production of Txakoli, offering high acidity and citrus flavors with a slight effervescence.",
             "growingRegions": [
@@ -555,7 +555,7 @@
         {
             "id": 50,
             "grapeColor": "White",
-            "grapeName": "Rkatsiteli",
+            "name": "Rkatsiteli",
             "origin": "Georgia",
             "description": "One of the oldest grape varieties in the world, producing aromatic wines with high acidity, floral and citrus notes.",
             "growingRegions": [
@@ -566,7 +566,7 @@
         {
             "id": 52,
             "grapeColor": "Red",
-            "grapeName": "Cinsault",
+            "name": "Cinsault",
             "origin": "France",
             "description": "A red grape.",
             "growingRegions": [

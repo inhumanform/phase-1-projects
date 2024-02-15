@@ -1,27 +1,50 @@
-const displayWineImage = () => {
-    fetch('http://localhost:3000/wine')
-        .then(response => response.json())
-        .then(wines => {
-            // console.log(wines[2].name)
-            const menu = document.getElementById('bev-image');
-            wines.forEach(wine => {
-                const wineImage = document.createElement('img');
-                wineImage.src = wine.image;
-                wineImage.alt = wine.name;
-                wineImage.classList.add('wine-image');
-                console.log(wineImage)
-                // wineImage.setAttribute('data-wine-id', wine.id);
+// const displayWineImage = () => {
+//     fetch('http://localhost:3000/wine')
+//         .then(response => response.json())
+//         .then(wines => {
+//             // console.log(wines[2].name)
+//             const menu = document.getElementById('bevImage');
+//             wines.forEach(wine => {
+//                 const wineImage = document.createElement('img');
+//                 wineImage.src = wine.image;
+//                 wineImage.alt = wine.name;
+//                 wineImage.classList.add('wine-image');
+//                 console.log(wineImage)
+//                 // wineImage.setAttribute('data-wine-id', wine.id);
 
-                menu.appendChild(wineImage);
+//                 menu.appendChild(wineImage);
 
-                wineImage.addEventListener('click', () => displayWineInfo(wine));
-            });
-        })
-        .catch(error => console.error('Failed to fetch wine collection:', error));
+//                 wineImage.addEventListener('click', () => displayWineInfo(wine));
+//             });
+//         })
+//         .catch(error => console.error('Failed to fetch wine collection:', error));
+// };
+
+const displayWineObject = (evt) => {
+    console.log(evt)
+    // fetch('http://localhost:3000/wine')
+    //     .then(response => response.json())
+    //     .then(wines => {
+    //         // console.log(wines[2].name)
+    //         const menu = document.getElementById('bevImage');
+    //         wines.forEach(wine => {
+    //             const wineImage = document.createElement('img');
+    //             wineImage.src = wine.image;
+    //             wineImage.alt = wine.name;
+    //             wineImage.classList.add('wine-image');
+    //             console.log(wineImage)
+    //             // wineImage.setAttribute('data-wine-id', wine.id);
+
+    //             menu.appendChild(wineImage);
+
+    //             wineImage.addEventListener('click', () => displayWineInfo(wine));
+    //         });
+    //     })
+    //     .catch(error => console.error('Failed to fetch wine collection:', error));
 };
 
 const displayWineInfo = (wine) => {
-    const wineDetail = document.getElementById('bev-details');
+    const wineDetail = document.getElementById('bevDetails');
     wineDetail.innerHTML = '';
     const detailImage = document.createElement('img');
     detailImage.src = wine.image;
@@ -64,7 +87,7 @@ const displayVarietalInfo = (poopoo, index) => {
     fetch(`http://localhost:3001/varietalInfo/${poopoo}`)
         .then(response => response.json())
         .then(varietalObj => {
-            const varietalName = varietalObj.grapeName
+            const varietalName = varietalObj.name
             const varietalHeading = document.getElementById('varietalHeader')
             // console.log("VHEAD", varietalHeading.textContent)
             // console.log('textcontent1', varietalHeading.textContent)
@@ -79,7 +102,7 @@ const displayVarietalInfo = (poopoo, index) => {
 }
 
 const addWineToCellar = () => {
-    const form = document.getElementById('new-bev');
+    const form = document.getElementById('newBev');
     if (!form) {
         console.error('Form not found');
         return;
@@ -114,77 +137,62 @@ const addWineToCellar = () => {
             .catch(error => console.error('Failed to add wine to collection:', error));
     });
 };
-// Here lies the functions for your search buttons
-// document.addEventListener('DOMContentLoaded', () => {
-//     const wineSearchBtn = document.getElementById('wine-search-btn');
-//     const grapeSearchBtn = document.getElementById('grape-search-btn');
-//     const regionSearchBtn = document.getElementById('region-search-btn');
-    // DOM Content loaded makes sure this runs after the page has been fully loaded (confirm this)
-    // wineSearchBtn.addEventListener('click', () => searchWineData());
-    // const query = searchInput.value;
-    // searchWineData(query).then(data => {
-    //     displayWineSearchResults(data, bev-details)
-    // })
 
-//     grapeSearchBtn.addEventListener('click', () => searchGrapes());
-//     regionSearchBtn.addEventListener('click', () => searchRegions());
-//     // These listeners call their respective search functions
-// });
+function populateWines(){
+    searchBlock = document.getElementById('wineSearch')
+     fetch(`http://localhost:3000/wine`)
+        .then(response => response.json())
+        .then(results => {
+            showOptions(searchBlock, results)})
+        
+    }
+function populateVarietals(){
+    searchBlock = document.getElementById('varietalSearch')
+    fetch(`http://localhost:3001/varietalInfo`)
+        .then(response => response.json())
+        .then(results => {
+            showOptions(searchBlock, results)
 
-// function searchWineData() {
-//     const query = document.querySelector('.collection-search-button .textbox').value;
-//     fetchWineData('my-wine-collection.json', query, 'wine');
-// }
+        })
+}
+function populateAppellations(){
+    searchBlock = document.getElementById('appellationSearch')
+    fetch(`http://localhost:3002/appellation`)
+        .then(response => response.json())
+        .then(results => {showOptions(searchBlock, results)})
+}
 
-// function searchGrapes() {
-//     const query = document.querySelector('.grape-search-button .textbox').value;
-//     fetchGrapeData('varietal-info-db.json', query, 'grape');
-// }
+function showOptions(searchBlock, wineStuff){
+    searchBox = searchBlock.querySelector("input")
+    dropdown = searchBlock.querySelector(".dropdown")
+    // querySelectorAll always returns an array even when there is only one matching element
+    if(searchBox.value.length > 2){
+        dropdown.classList.remove('hidden')
+        options = dropdown.querySelectorAll('span')
+        populateDropDown(searchBlock, wineStuff)
+        wineStuff.filter((wineResult) => {
 
-// function searchRegions() {
-//     const query = document.querySelector('.region-search-button .textbox').value;
-//     fetchRegionData('wine-appellation-db.json.json', query, 'region');
-// }
+        })
 
-// function fetchWineData(fileName, query, type) {
-//     fetch(`http://localhost:3000/wine/`)
-//         .then(response => response.json())
-//         .then(data => {
-//             const results = data.filter(item => item.name.toLowerCase().includes(query.toLowerCase()));
-//             displayResults(results, type);
-//         })
-//         .catch(error => console.error('Error fetching data:', error));
+    }
+}
 
-    // function fetchRegionData(fileName, query, type) {
-        // figure out how to get json to watch the correct file
-//         fetch(`http://localhost:3000/wine/`)
-//             .then(response => response.json())
-//             .then(data => {
-//                 const results = data.filter(item => item.name.toLowerCase().includes(query.toLowerCase()));
-//                 displayResults(results, type);
-//             })
-//             .catch(error => console.error('Error fetching data:', error));
-//     }
-// }
+function populateDropDown(searchBlock, wineStuff){
+    dropdown = searchBlock.querySelector(".dropdown")
+    dropdown.innerHTML=''
+    // Use innerhtml because it clears this ho out. otherwise it will keep populating the same results over and over in the dropdown
+    wineStuff.map((wineThing)=>{
+        item = document.createElement('span')
+        item.textContent = wineThing.name
+        // item.addEventL
+        dropdown.append(item)
+    })
 
-// function fetchGrapeData(fileName, query, type) {
-//     fetch(`http://localhost:3001/varietalInfo/`)
-//         .then(response => response.json())
-//         .then(data => {
-//             const results = data.filter(item => item.name.toLowerCase().includes(query.toLowerCase()));
-//             displayResults(results, type);
-//         })
-//         .catch(error => console.error('Error fetching data:', error));
-// }
+}
 
-// function displayDetails(data, detailsdiv) {
-//     // Clears previous details
-//     detailsdiv.innerHTML = '';
-// }
 
 const main = () => {
-    displayWineImage();
-
+    displayWineObject();
 
 };
 

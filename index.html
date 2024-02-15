@@ -24,83 +24,70 @@
 </head>
 
 <body>
-    <div class="Title-Header">
+    <div class="titleHeader">
+        
         <span class="NameofWebsite">Ogun</span>
 
         <div class="searchable">
-            <a href="#">my collection</a>
-            <span class="wine-search"></span>
-            <input type="text" class="textbox" placeholder="search your wines..." />
-            <a class="search-btn" id="collection-search-button" href="#">
-                <!-- <p>></p> -->
-            </a>
-
-            <a href="#">grapes</a>
-            <span class="grape-search"></span>
-            <input type="text" class="textbox" placeholder="search grapes..." />
-            <a class="search-btn" id="grape-search-button" href="#">
-                <!-- <p>></p> -->
-            </a>
-            </span>
-
-            <a href="#">regions</a>
-            <span class="region-search">
-                <spa />
-                <input type="text" class="textbox" placeholder="search wine regions..." />
-                <a class="search-btn" id="region-search-button" href="#">
-                    <!-- <p>></p> -->
-                </a>
-            </span>
-        </div>
-
-        <!-- <div class="grape-search">
-                <input type="text" class="textbox" placeholder="search grapes..."/>
-                <a class = "search-btn" href="#">
-                  <p>></p>
-                </a>
-              </div>
-
-              <div class="wine-search">
-                <input type="text" class="textbox" placeholder="search your wines..."/>
-                <a class = "search-btn" href="#">
-                  <p>></p>
-                </a>
-              </div>
-
-              <div class="region-search">
-                <input type="text" class="textbox" placeholder="search wine regions..."/>
-                <a class = "search-btn" href="#">
-                  <p>></p>
-                </a>
-              </div> -->
-
-        <div id="bev-image"></div>
-        <div id="bev-details"></div>
+            <div class='searchBlock' id = 'wineSearch'>
+                <a href="#">my collection</a>
+                <input type="text" class="textbox" placeholder="search your wines..." id="wine" onkeyup = "populateWines()"/>
+                <div class = "dropdown hidden"></div>
 
 
-        <div>
-            <form id="new-bev">
-                <label for="new-name">Name: </label>
-                <input type="text" name="name" id="new-name" />
-                <label for="new-vintage">Vintage: </label>
-                <input type="text" name="vintage" id="new-vintage" />
-                <label for="new-image">Bottle Image: </label>
-                <input type="text" name="image" id="new-image" />
-                <label for="purchase-price">Purchase Price: </label>
-                <input type="number" name="purchase-price" id="purchase-price" />
-                <label for="new-comment">Comment: </label>
-                <textarea id="new-comment"></textarea>
-                <input type="submit" id='submit-button' value="Add to Cellar" />
+            </div>
+            <div class='searchBlock' id = 'varietalSearch'>
+                <a href="#">grapes</a>
+                <input type="text" class="textbox" placeholder="search grapes..." id="varietalInfo" onkeyup = "populateVarietals()"/>
+                <!--  tried onfocus, was only doing the thing after the second focus bc js is horseshit - MONKEYUPP 🙊 -->
+                <div class = "dropdown hidden"></div>
 
-                <body onload="setup()">
-                    <form id='formid' action="form.php" method="POST" enctype="multipart/form-data">
-                        <input id='fileid' type='file' name='filename' hidden />
-                        <input id='buttonid' type='button' value='Upload Bottle Image' />
-                        <input type='submit' value='Submit' />
-                    </form>
+            
 
-            </form>
-        </div>
+            </div>
+
+            <div class='searchBlock' id = 'appellationSearch'>
+
+                <a href="#">regions</a>
+                <input type="text" class="textbox" placeholder="search wine regions..." id="appellation" onkeyup = "populateAppellations()"/>
+                <div class = "dropdown hidden"></div>
+
+            </div>
+    
+    </div>
+    </div>
+
+
+    <div id="bevImage"></div>
+    <div id="bevDetails"></div>
+
+
+    <div id="bevForm">
+        <form id="newBev">
+
+            <label for="new-name">Name: </label>
+            <input type="text" name="name" id="new-name" />
+            <label for="new-vintage">Vintage: </label>
+            <input type="text" name="vintage" id="new-vintage" />
+            <label for="new-region">Region: </label>
+            <input type="text" name="region" id="new-region" />
+            <label for="new-image">Bottle Image: </label>
+            <input type="text" name="image" id="new-image" />
+            <label for="purchase-price">Purchase Price: </label>
+            <input type="number" name="purchase-price" id="purchase-price" />
+            <label for="new-comment">Comment: </label>
+            <textarea id="new-comment"></textarea>
+            <input type="submit" id='submit-button' value="Add to Cellar" />
+
+            <body onload="setup()">
+                <form id='formid' action="form.php" method="POST" enctype="multipart/form-data">
+                    <input id='fileid' type='file' name='filename' hidden />
+                    <input id='buttonid' type='button' value='Upload Bottle Image' />
+                    <input type='submit' value='Submit' />
+                </form>
+
+        </form>
+    </div>
 
 
 </body>

@@ -1,16 +1,117 @@
-#bev-image {
-display: flex;
-object-fit: contain;
-flex-wrap: nowrap;
-flex-direction: row;
-img {
-max-width: 100px;
-max-height: 100px ;
-padding-top: 10px;
-}
+@font-face {
+    font-family: 'Metal';
+    src: url('../phase-1-projects/assets/Fonts/evil-sound-font/EvilSound-nRM8M.ttf');
 }
 
-#bev-details {
+@font-face {
+    font-family: 'Doom';
+    src: url('../phase-1-projects/assets/Fonts/goth-titan-font/GothTitan-0W5md.ttf');
+}
+
+@font-face {
+    font-family: 'Sludge';
+    src: url('../phase-1-projects/assets/Fonts/blackiron-font/BlackironDemoRegular-ow2da.ttf');
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0px;
+}
+
+.titleHeader {
+    grid-area: 1 / 1 / 2 / 6;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items:center;
+    background-color: black;
+    padding-left: 40px;
+    
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  background-color: gray;
+  top: 100%;
+  width: 100%;
+  height: 200px;
+  overflow: scroll;
+  padding: 10px;
+  font-family: 'Arial';
+  /* display: inline-block;     */
+  span{
+    margin: 2px;
+  }
+};
+
+
+
+.titleBox {}
+#wineSearch, #varietalSearch{
+
+    div {
+
+        color: white;
+        font-size: 14px
+    }
+}
+#newBev {
+    grid-area: 2 / 1 / 6 / 2;
+    height: 30px;
+    width: 200px;
+    font-size: xx-large;
+    label { margin-bottom: 1000px;}
+
+}
+
+#bevForm {
+    background-color: black;
+    height: 1000%;
+    width: 50%;
+    font-family: 'Sludge';
+    color: aliceblue;
+    padding: 25px;
+
+    label {
+        padding: 5px 0px
+    }
+
+    ;
+
+    input {
+        margin: 5px 0px;
+        padding: 10px;
+    }
+
+}
+
+#bevDetails {
+    grid-area: 3 / 3 / 6 / 6;
+
+}
+
+#bevImage {
+    grid-area: 2 / 2 / 3 / 6;
+
+    img {
+        max-width: 100px;
+        max-height: 100px;
+        padding-top: 10px;
+    }
+}
+
+#bevDetails {
     img {
         max-width: 500px;
         max-height: 500px;
@@ -18,73 +119,51 @@ padding-top: 10px;
 
     }
 }
-@font-face {
-    font-family: 'Metal';
-    src: url('../phase-1-projects/assets/Fonts/evil-sound-font/EvilSound-nRM8M.ttf');
 
-}
-
-@font-face {
-    font-family: 'Doom';
-    src: url('../phase-1-projects/assets/Fonts/goth-titan-font/GothTitan-0W5md.ttf');
-
-}
 
 .NameofWebsite {
-font-family: 'Metal';
-font-size: 65px;
-background-color: black;
-background-size:75%;
-color: aliceblue;
-width: 100%;
-display: inline-block;
+    font-family: 'Metal';
+    font-size: 65px;
+    background-color: black;
+    color: aliceblue;
+    width: 100%;
+    display: inline-block;
+    grid-area: 1 / 1 / 2 / 2;
 
 }
 
-#new-bev {
-    display: flex;
-    flex-direction: column;
-    height: 30px;
-    width: 200px;
-    column-gap: 50px:;
-    margin-left: 1200px;
+#new-comment {}
 
-
-
-}
-#new-comment {
-}
-
-h2 {
-    font-family: 'Doom';
-}
-
-h3 {
-    font-family: 'Doom';
-}
-
-h4 {
-    font-family: 'Doom';
-}
-
-h5{
-    font-family: 'Doom';
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Sludge';
 }
 
 h6 {
-    font-family: 'Doom';
     font-size: 36px;
 }
+
 .searchable {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
     font-family: 'Doom';
-    margin-left: -50px;
-    font-size: 24px;
     background-color: black;
-    font-size: 36px;
+    font-size: 42px;
+    grid-area: 1 / 2 / 2 / 6;
+    display: flex;
+    justify-content: space-around;
 
 
 }
+
+.searchBlock {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  input{
+
+   border: 5px solid rgb(56, 9, 78);
+  }
+  }  
+
