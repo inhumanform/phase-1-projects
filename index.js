@@ -1,49 +1,27 @@
-// const displayWineImage = () => {
-//     fetch('http://localhost:3000/wine')
-//         .then(response => response.json())
-//         .then(wines => {
-//             // console.log(wines[2].name)
-//             const menu = document.getElementById('bevImage');
-//             wines.forEach(wine => {
-//                 const wineImage = document.createElement('img');
-//                 wineImage.src = wine.image;
-//                 wineImage.alt = wine.name;
-//                 wineImage.classList.add('wine-image');
-//                 console.log(wineImage)
-//                 // wineImage.setAttribute('data-wine-id', wine.id);
+const displayWineImage = () => {
+    fetch('http://localhost:3000/wine')
+        .then(response => response.json())
+        .then(wines => {
+            // console.log(wines[2].name)
+            const menu = document.getElementById('bevImage');
+            wines.forEach(wine => {
+                const wineImage = document.createElement('img');
+                wineImage.src = wine.image;
+                wineImage.alt = wine.name;
+                wineImage.classList.add('wine-image');
+                console.log(wineImage)
+                // wineImage.setAttribute('data-wine-id', wine.id);
 
-//                 menu.appendChild(wineImage);
+                menu.appendChild(wineImage);
 
-//                 wineImage.addEventListener('click', () => displayWineInfo(wine));
-//             });
-//         })
-//         .catch(error => console.error('Failed to fetch wine collection:', error));
-// };
-
-const displayWineObject = (evt) => {
-    console.log(evt)
-    // fetch('http://localhost:3000/wine')
-    //     .then(response => response.json())
-    //     .then(wines => {
-    //         // console.log(wines[2].name)
-    //         const menu = document.getElementById('bevImage');
-    //         wines.forEach(wine => {
-    //             const wineImage = document.createElement('img');
-    //             wineImage.src = wine.image;
-    //             wineImage.alt = wine.name;
-    //             wineImage.classList.add('wine-image');
-    //             console.log(wineImage)
-    //             // wineImage.setAttribute('data-wine-id', wine.id);
-
-    //             menu.appendChild(wineImage);
-
-    //             wineImage.addEventListener('click', () => displayWineInfo(wine));
-    //         });
-    //     })
-    //     .catch(error => console.error('Failed to fetch wine collection:', error));
+                wineImage.addEventListener('click', (event) => displayWineInfo(event, wine));
+            });
+        })
+        .catch(error => console.error('Failed to fetch wine collection:', error));
 };
 
-const displayWineInfo = (wine) => {
+
+const displayWineInfo = (event, wine) => {
     const wineDetail = document.getElementById('bevDetails');
     wineDetail.innerHTML = '';
     const detailImage = document.createElement('img');
@@ -82,9 +60,49 @@ const displayWineInfo = (wine) => {
 
     wineDetail.appendChild(comment);
 };
+const displayVarietalBlock = (event, varietal) => {
+    const wineDetail = document.getElementById('bevDetails');
+    console.log(event)
+    console.log(varietal)
+    wineDetail.innerHTML = '';
+    const name = document.createElement('h2');
+    name.textContent = `${varietal.name}`;
 
-const displayVarietalInfo = (poopoo, index) => {
-    fetch(`http://localhost:3001/varietalInfo/${poopoo}`)
+    const grapeColor = document.createElement('h3');
+    // console.log(vintage)
+    grapeColor.textContent = `Grape Color: ${varietal.grapeColor}`;
+
+
+    const origin = document.createElement('h5');
+    origin.textContent = `Origin: ${varietal['origin']}`;
+
+    const description = document.createElement('h6');
+    description.textContent = `Description: ${varietal.description}`;
+
+    const growingRegions = document.createElement('h4');
+    growingRegions.setAttribute('id', 'regionHeader')
+    growingRegions.textContent = `Regions: `
+    varietal.growingRegions.map((r) => {
+        region = document.createElement('li')
+        region.textContent = r
+        growingRegions.append(region)
+    })
+
+
+    wineDetail.appendChild(name);
+    wineDetail.appendChild(grapeColor);
+    wineDetail.appendChild(origin);
+    wineDetail.appendChild(description);
+    wineDetail.appendChild(growingRegions);
+    
+
+
+};
+
+
+
+const displayVarietalInfo = (varietalId, index) => {
+    fetch(`http://localhost:3001/varietalInfo/${varietalId}`)
         .then(response => response.json())
         .then(varietalObj => {
             const varietalName = varietalObj.name
@@ -101,22 +119,27 @@ const displayVarietalInfo = (poopoo, index) => {
         )
 }
 
-const addWineToCellar = () => {
-    const form = document.getElementById('newBev');
-    if (!form) {
+function addSubmit(){
+    const form = document.getElementById('newBev')
+    form.addEventListener("submit", addWineToCellar)
+}
+
+const addWineToCellar = (e) => {
+    const form = document.getElementById('newBev')
+
+
+    console.log(e)
+    if(!form) {
         console.error('Form not found');
         return;
     }
-
-    form.addEventListener('submit', event => {
-        event.preventDefault();
 
 
         const formData = {
             name: document.getElementById('new-name').value,
             vintage: document.getElementById('new-vintage').value,
             image: document.getElementById('new-image').value,
-            'purchase-price': document.getElementById('purchase-price').value,
+            purchasePrice: document.getElementById('purchase-price').value,
             comment: document.getElementById('new-comment').value
         };
 
@@ -135,11 +158,11 @@ const addWineToCellar = () => {
                 displayWineImage();
             })
             .catch(error => console.error('Failed to add wine to collection:', error));
-    });
+    ;
 };
 
 function populateWines(){
-    searchBlock = document.getElementById('wineSearch')
+    const searchBlock = document.getElementById('wine')
      fetch(`http://localhost:3000/wine`)
         .then(response => response.json())
         .then(results => {
@@ -147,53 +170,49 @@ function populateWines(){
         
     }
 function populateVarietals(){
-    searchBlock = document.getElementById('varietalSearch')
+    const searchBlock = document.getElementById('varietal')
     fetch(`http://localhost:3001/varietalInfo`)
         .then(response => response.json())
         .then(results => {
             showOptions(searchBlock, results)
-
         })
-}
-function populateAppellations(){
-    searchBlock = document.getElementById('appellationSearch')
-    fetch(`http://localhost:3002/appellation`)
-        .then(response => response.json())
-        .then(results => {showOptions(searchBlock, results)})
 }
 
 function showOptions(searchBlock, wineStuff){
-    searchBox = searchBlock.querySelector("input")
-    dropdown = searchBlock.querySelector(".dropdown")
+    const searchBox = searchBlock.querySelector("input")
+    const dropdown = searchBlock.querySelector(".dropdown")
     // querySelectorAll always returns an array even when there is only one matching element
     if(searchBox.value.length > 2){
         dropdown.classList.remove('hidden')
-        options = dropdown.querySelectorAll('span')
+        const options = dropdown.querySelectorAll('span')
         populateDropDown(searchBlock, wineStuff)
-        wineStuff.filter((wineResult) => {
-
-        })
-
+        console.log(wineStuff)
     }
 }
 
 function populateDropDown(searchBlock, wineStuff){
-    dropdown = searchBlock.querySelector(".dropdown")
+    const dropdown = searchBlock.querySelector(".dropdown")
     dropdown.innerHTML=''
     // Use innerhtml because it clears this ho out. otherwise it will keep populating the same results over and over in the dropdown
     wineStuff.map((wineThing)=>{
-        item = document.createElement('span')
+        const item = document.createElement('span')
         item.textContent = wineThing.name
-        // item.addEventL
+        console.log(wineThing.name)
+        if(wineThing.name){
+            item.addEventListener("click", (event) => displayVarietalBlock(event, wineThing))
+        }else if(wineThing.purchasePrice){
+            item.addEventListener("click", (event) => displayWineInfo(event, wineThing))
+        }
         dropdown.append(item)
     })
 
 }
 
 
-const main = () => {
-    displayWineObject();
 
+const main = () => {
+    displayWineImage();
+    addSubmit();
 };
 
 main();

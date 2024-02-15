@@ -25,18 +25,22 @@
 
 <body>
     <div class="titleHeader">
-        
+        <div class="tooltip">
+            <span class="tooltiptext">The Yoruban God of Smithing, Distilling, and War</span>
+          </div>
         <span class="NameofWebsite">Ogun</span>
+        
+
 
         <div class="searchable">
-            <div class='searchBlock' id = 'wineSearch'>
+            <div class='searchBlock' id = 'wine'>
                 <a href="#">my collection</a>
                 <input type="text" class="textbox" placeholder="search your wines..." id="wine" onkeyup = "populateWines()"/>
                 <div class = "dropdown hidden"></div>
 
 
             </div>
-            <div class='searchBlock' id = 'varietalSearch'>
+            <div class='searchBlock' id = 'varietal'>
                 <a href="#">grapes</a>
                 <input type="text" class="textbox" placeholder="search grapes..." id="varietalInfo" onkeyup = "populateVarietals()"/>
                 <!--  tried onfocus, was only doing the thing after the second focus bc js is horseshit - MONKEYUPP 🙊 -->
@@ -46,11 +50,11 @@
 
             </div>
 
-            <div class='searchBlock' id = 'appellationSearch'>
+            <!-- <div class='searchBlock' id = 'appellation'>
 
                 <a href="#">regions</a>
                 <input type="text" class="textbox" placeholder="search wine regions..." id="appellation" onkeyup = "populateAppellations()"/>
-                <div class = "dropdown hidden"></div>
+                <div class = "dropdown hidden"></div> -->
 
             </div>
     
@@ -63,7 +67,7 @@
 
 
     <div id="bevForm">
-        <form id="newBev">
+        <form id="newBev" >
 
             <label for="new-name">Name: </label>
             <input type="text" name="name" id="new-name" />
@@ -71,20 +75,20 @@
             <input type="text" name="vintage" id="new-vintage" />
             <label for="new-region">Region: </label>
             <input type="text" name="region" id="new-region" />
-            <label for="new-image">Bottle Image: </label>
-            <input type="text" name="image" id="new-image" />
-            <label for="purchase-price">Purchase Price: </label>
-            <input type="number" name="purchase-price" id="purchase-price" />
+            <label for="purchasePrice">Purchase Price: </label>
+            <input type="tel" name="purchasePrice" id="purchase-price" />
+            <label for="purchase-price">Image: </label>
+            <input type="text" name="new-image" id="new-image" />
             <label for="new-comment">Comment: </label>
             <textarea id="new-comment"></textarea>
-            <input type="submit" id='submit-button' value="Add to Cellar" />
+            
 
-            <body onload="setup()">
+            <!-- <body onload="setup()">
                 <form id='formid' action="form.php" method="POST" enctype="multipart/form-data">
                     <input id='fileid' type='file' name='filename' hidden />
-                    <input id='buttonid' type='button' value='Upload Bottle Image' />
-                    <input type='submit' value='Submit' />
-                </form>
+                    <input id='buttonid' type='button' value='Upload Bottle Image' /> -->
+                    <input type='submit' value='Add to Cellar' />
+                <!-- </form> -->
 
         </form>
     </div>

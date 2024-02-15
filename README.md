@@ -1,25 +1,22 @@
 ## Welcome to my Phase 1 Project - A Personal Cellar Tracker! ##
 
 # Intro #
-This small application will provide users with a lightweight source to list, categorize, and rate wine and spirits that they have enjoyed!
+This small application will provide users with a lightweight source to list, categorize, and rate wine and spirits that they have enjoyed! Included in the .json files is a list of grape varietals and key growing regions (to be expanded soon!)
 
 # Features #
-1. Add a beverage to be stored to your personal list.
-2. Categorize beverage by type: including lables for vintage, spirit type, country of origin, and more!
-3. Create a custom list of entries
-4. Add, delete, or edit entries.
-5. Built in label information (grape varietal info, spirits history, region info)
+1. Add a beverage to be stored to your personal cellar list.
+2. Recall your cellar list.
+3. Browse grape varietal information.
 
-# Behind the Scenes #
-1. Use 'Open Brewery DB' API to return brewery data 
-2. Use 'Global Wine Score' API to return wine score data
-3. Build a custom data base with Wine Appellation info. Likely to start with France, USA, and Italy. Likely to expand.
 
-# Pitch Deliverables#
+# Instructions #
+1. Use node.js version 20.10.0 or newer to enable usage of json-server and live-server.
 
-1. Basic Story
-2. Core Features
-3. How I'll use the db.json and API
-4. Challenges I expect to face
-5. 3 distinct event listeners
-6. Instances of array iteration: you can use .forEach(). .map(), .filter()
+2. Use json-server to watch 'my-wine-collection.json' and 'varietal-info-db.json'. Depending on your environment, you may need to set these to different ports. I use 3000(default) and 3001.
+
+# Future Goals #
+1. Expand varietals and wine regions data.
+2. Implement wine region search and display functionality.
+3. Implement an external API for average market prices, more regional information, etc.
+4. Filter and organize the search dropdowns.
+5. More styling!

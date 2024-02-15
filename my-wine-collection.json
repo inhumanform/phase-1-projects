@@ -1,7 +1,7 @@
 {
   "wine": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Chateau Musar Cinsault",
       "vintage": "2010",
       "image": "assets/Musar-2010.jpg",
@@ -13,19 +13,19 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Domaine Didier Dagueneau 'Blanc...etc.'",
       "vintage": "2020",
       "image": "assets/dagueneaublancetc.jpg",
       "purchasePrice": "$119.99",
-      "comment": "Known as a maverick in the Loire Valley, Dagueneau focuses on distinct soil types to higlight his wines stark minerality ",
+      "comment": "Known as a maverick in the Loire Valley, Dagueneau focuses on distinct soil types to highlight his wines stark minerality ",
       "rating": "9.0 / 10",
       "varietalIds": [
         36
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Perrier-Jouët 'Belle Époque Brut'",
       "vintage": "1996",
       "image": "assets/Perrier-Jouet+1996+Belle+Epoque.jpeg",
